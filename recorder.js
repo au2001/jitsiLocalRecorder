@@ -1,4 +1,13 @@
-const status = document.getElementById('status');
+const controls = document.getElementById('recordControls');
+
+function handleHashChange() {
+    if (window.location.hash.toLowerCase().includes("record"))
+        controls.style.display = null;
+    else
+        controls.style.display = "none";
+}
+handleHashChange();
+window.addEventListener("hashchange", handleHashChange);
 
 let recorder;
 let recordingData = [];
