@@ -1,5 +1,8 @@
 const controls = document.getElementById('recordControls');
 
+/**
+ * Displays or hides the controls whether the URL finishes with "#record" or not
+ * */
 function handleHashChange() {
     if (window.location.hash.toLowerCase().includes("record"))
         controls.style.display = null;
